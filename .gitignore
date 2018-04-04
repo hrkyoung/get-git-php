@@ -1,0 +1,7 @@
+.DS_Store
+._*
+Dockerfile
+docker-compose.yml
+*/._*
+php
+httpd/logs

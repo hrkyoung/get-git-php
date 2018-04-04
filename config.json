@@ -1,0 +1,23 @@
+{
+  "get-git-php": {
+    "settings": {
+      "secret": "123450",
+      "ip_whitelist": [],
+      "domain_whitelist": []
+    },
+    "push": [
+      {
+        "method": "stringIsSame",
+        "cmd": "",
+        "param": [
+          "${payload.ref}",
+          "refs/heads/master"
+        ],
+        "assert": true,
+        "run": [
+          "cd /path/to/somewhere && git pull origin master"
+        ]
+      }
+    ]
+  }
+}

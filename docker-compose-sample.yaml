@@ -1,0 +1,12 @@
+version: '2'
+services:
+    webserver:
+      build: .
+      volumes:
+        - ./httpd/conf/apache2.conf:/etc/apache2/apache2.conf
+        - ./httpd/conf/sites-enabled:/etc/apache2/sites-enabled
+        - .:/var/www
+      ports:
+          - "4056:80"
+          - "4057:443"
+      network_mode: bridge
